@@ -1,0 +1,16 @@
+{% extends 'searchDonor.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+
+    {% for d in data %}
+    <h3>: {{ d.name }}</h3>
+    <h3>age: {{ d.age }}</h3>
+    <h3>Gender: {{ d.gender }}</h3>
+    <h3>BG: {{d.blood_group}}</h3>
+    <h3>city: {{d.city}}</h3>
+    <h3>Pnum: {{d.phonenumber}}</h3>
+    {% endfor %}
+   <hr>
+
+{% endblock %}

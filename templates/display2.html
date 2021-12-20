@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Page</title>
+</head>
+<style>
+    #container{
+   border-style:grove;
+   border-width:5px;
+    }
+    td{
+    text-align:left;
+border-style:hidden hidden ridge hidden ;
+height: 50px;
+    }
+
+    th{
+    border-style: dotted;
+    }
+    table{
+            margin-left: 18%;
+            text-align: center;
+
+        }
+    #update-btn{
+            background: #57d550;
+            border: solid #237d15 0px;
+
+        }
+        button{
+            /* margin-left: 1rem; */
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  /* background: #57d550; */
+  /* padding: 10px 20px 10px 20px; */
+  /* border: solid #1f628d 0px; */
+  text-decoration: none;
+            /* margin-left: 40%; */
+            /* size: 2rem; */
+            /* width:10%; */
+            /* height: 5%; */
+            /* font-size: 20rem; */
+            /* background-color: rgb(15, 201, 15); */
+        }
+</style>
+<body>
+<table id="container">
+    <tr>
+        <th>HeadLine</th>
+        <th>Button</th>
+    </tr>
+{% for link in links %}
+<!--    <h5>List: {{ link }}</h5>-->
+<!--    <h4>Link: {{ link.HtmlLink }}</h4>-->
+<!--    <h3>news: {{ link.News }}</h3>-->
+    <tr>
+        <td>{{ link.News }}</td>
+        <td><a href={{ link.HtmlLink }} target="_blank"><button id="update-btn" type="button" >Open</button></a></td>
+    </tr>
+
+{% endfor %}
+</table>
+
+
+
+</body>
+</html>

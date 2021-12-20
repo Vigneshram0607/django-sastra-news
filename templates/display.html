@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Page</title>
+</head>
+<style>
+    #update-btn{
+            background: #57d550;
+            border: solid #237d15 0px;
+
+        }
+        button{
+            /* margin-left: 1rem; */
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  /* background: #57d550; */
+  /* padding: 10px 20px 10px 20px; */
+  /* border: solid #1f628d 0px; */
+  text-decoration: none;
+            /* margin-left: 40%; */
+            /* size: 2rem; */
+            /* width:10%; */
+            /* height: 5%; */
+            /* font-size: 20rem; */
+            /* background-color: rgb(15, 201, 15); */
+        }
+</style>
+<body>
+{% for k,v in dict.items %}
+<h2>Hello world</h2>
+<h3>{{ v }}</h3>
+{% for l in v %}
+<table>
+{% for key, value in l.items %}
+    <h1>{{ key }}</h1>
+    <tr>
+        <td> Link: {{ key }} </td>
+        <td> News: {{ value }} </td>
+        <a href="{{ key }}"><button id="update-btn" type="button" >Open</button></a>
+    </tr>
+{% endfor %}
+</table>
+
+{% endfor %}
+
+<!--<a href={{ link }}><button id="update-btn" type="button" >Open</button></a>-->
+{% endfor %}
+<h1>Display Page</h1>
+
+
+</body>
+</html>
